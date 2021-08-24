@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Scene</title>
+    <style>
+        body{
+            background-image: url(/images/CrimeSceneBg.jpg);
+            background-size: contain;
+            background-attachment: fixed;
+            background-blend-mode: difference;
+            
+        }
+      
+.LabBtn{
+    background-color: red;
+  color: whitesmoke;
+  text-align: center;
+  font-size: 35px;
+  right: 125px;
+  bottom: 210px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: fixed;
+  padding: 10px;
+
+}
+.LabBtn:hover{
+    opacity: 0.7;
+}
+.NxtBtn{
+    background-color: red;
+  color: whitesmoke;
+  text-align: center;
+  font-size: 35px;
+  right: 250px;
+  bottom: 110px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: fixed;
+  padding: 10px;
+}
+.NxtBtn:hover{
+    opacity: 0.7;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.model{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: transparent;
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+  align-items: center;
+}
+.model-content{
+  background-color: transparent;
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+  align-items: center;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  right: 40px;
+  font-size: 35px;
+  font-weight: bold;
+}
+.closed{
+  color: white;
+  float: right;
+  right: 40px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.closed:hover,
+.closed:focus{
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.Report{
+    position: fixed;
+    border-radius: 0px;
+    background-color: transparent;
+    padding: 0px;
+    border-color: transparent;
+    left: 800px;
+    top: 540px;
+    cursor: pointer;
+}
+.PTable{
+  position: fixed;
+    border-radius: 0px;
+    background-color: transparent;
+    padding: 0px;
+    border-color: transparent;
+    left: 263px;
+    top: 300px;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+   
+      
+    <img src="/images/Crime Scene 1/DeadMan.png" alt="" onclick="DeadMan()" style="width: 280px; position: fixed; left: 480px; top: 540px; cursor: pointer;">
+    <img src="/images/Crime Scene 1/Water Splash.png" alt="" onclick="WaterPuddle()" style="width: 70px; position: fixed; left: 635px; top: 520px; cursor: pointer;">
+    <img src="/images/Crime Scene 1/Water Bottle.png" alt="" onclick="Bottle()" style="width: 19px; position: fixed; left: 618px; top: 343px; cursor: pointer;">
+    <img src="/images/Crime Scene 1/carKeys.png" alt="" onclick="carKeys()" style="width: 50px; position: fixed; left: 890px ;top: 600px; cursor: pointer;">
+    <img src="/images/Crime Scene 1/broken_glass.png" onclick="Glass()" style="width: 80px; position: fixed; left: 940px; top: 520px; cursor: pointer;">
+    <a href="/letsmeet.html"> <button class="NxtBtn">Next >></button></a>
+    <button id="DNA" class="Report"><img src="/images/Crime Scene 1/DNAreport.png" style="width: 100px;"></button>
+    <button id="Periodic" class="PTable"><img src="/images/Crime Scene 1/Periodic_table.png" style="width: 100px;"></button>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="/images/Crime Scene 1/DNATestreport.png" alt="" style="width: 600px; position: relative; left: 300px;">
+          </div>
+
+    </div>
+    <div id="myModel" class="model">
+      <div class="model-content">
+        <span class="closed">&times;</span>
+        <img src="/images/Crime Scene 1/PTable.png" style="width: 1000px; position: relative;left: 100px;">
+      </div>
+    </div>
+   
+    <script>
+        function DeadMan(){
+            alert("Death due stab wounds resulting from any sharp object penetrating into the skin, soft tissues, and organs causing lethal injuries.")
+        }
+        function Glass(){
+            alert("Broken pieces of a glass flask with blood stains")
+        }
+        function WaterPuddle(){
+            alert("A relatively cold water was found around the dead body near the wound.")
+        }
+        function Bottle(){
+            alert("A bottle of water!")
+        }
+        function carKeys(){
+            alert("Car Keys were found at the crime scene")
+        }
+
+var modal = document.getElementById("myModal");
+
+var btn = document.getElementById("DNA");
+
+var span = document.getElementsByClassName("close")[0];
+
+var model = document.getElementById("myModel");
+var bttn = document.getElementById("Periodic");
+var span1 = document.getElementsByClassName("closed")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  } 
+}
+
+bttn.onclick = function(){
+  model.style.display = "block";
+}
+span1.onclick = function(){
+model.style.display="none";
+}
+window.onclick = function(event){
+  if(event.target == model){
+    model.style.display = "none";
+  }
+}
+
+    </script>
+</body>
+</html>

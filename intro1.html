@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+    <style>
+        .intro-wrap{
+		display: flex;
+		height: 100vh;
+		background-image: url(/images/Bg_MagnifyDark.jfif);
+        background-size:cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        color: rgb(24, 21, 12);
+        font-size: larger;
+        
+}
+.intro { 
+
+        left: 50px;
+        top: 180px;
+        position: fixed;
+    
+}
+
+.btn{
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+.typebyletter{
+    font-size: 60px;
+}
+
+
+
+    </style>
+</head>
+<body onload="typeWriter()">
+    
+    <div class="intro-wrap">
+        <div class="intro">
+            <div class="intro-content" style="max-width: 650px;">
+                <p id= "demo" class="typebyletter" style="line-height: 1.8em; color:blanchedalmond; padding: 0.5rem;">
+             </p>
+                
+            </div>
+            <div><a href="/DuplCrimeScene.html"><button class="btn" style="position: fixed; right: 40px; bottom: 40px;"> <img src="/images/NextButton.png" alt="" style="width: 70px;"> </button></a></div>
+        </div>
+        </div>
+        
+        
+
+        <script>
+           var i = 0;
+var txt = "Hello Detective! We need you at the Crime Scene, now!";
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+        </script>
+</body>
+</html>

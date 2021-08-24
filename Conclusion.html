@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's meet the Suspects</title>
+    <style>
+         .intro-wrap{
+		display: flex;
+		height: 100vh;
+		background-image: url(/images/Conclusion_bg.png);
+        background-size:cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: rgb(24, 21, 12);
+        font-size: larger;
+        
+}
+.intro { 
+
+		align-self: center;
+	position: fixed;
+    left: 70px;
+    top: 200px;
+    
+}
+.typebyletter{
+    font-size: 20px;
+}
+.btn{
+    background-color: transparent;
+            color: whitesmoke;
+            position: fixed;
+            text-align: 35px;
+            width: 200px;
+            text-align: center;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            bottom: 60px;
+            right: 80px;
+            font-size: 30px; 
+}
+
+    </style>
+</head>
+<body onload="typeWriter()">
+    <div class="intro-wrap">
+        <div class="intro">
+            <div class="intro-content" style="max-width: 650px; margin: auto;">
+                <p id= "demo" class="typebyletter" style="line-height: 1.8em; color: whitesmoke; padding: 0.5rem; ">
+                </p>
+                
+            </div>
+            <div><a href="/thankyou.html"><button class="btn" style="position: fixed; right: 40px; bottom: 40px;">Next >>></button></a></div>
+        </div>
+        </div>                  
+        <script>
+            var i = 0;
+var txt = "Ryan D'mello, my partner was very self involved and arrogant.We made a product together where in his name wasn't mentioned. He complained it to the director and a huge fuss. We often had a lot of fights and he publically humiliated me. I used an Ice dagger to kill him which I made using the CryoPreservator as If someone was killed with a Knife made of Ice, Then the murder weapon will self destruct in a matter of time and my finger prints were in the lab as I already worked there.";
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+        </script>
+</body>
+</html>

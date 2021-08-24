@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Murder Weapon</title>
+  <style>
+    body{
+     background: radial-gradient(
+      rgba(65, 144, 247, 0.562) 0%,
+      		rgb(66, 161, 224) 100%),
+      		url('/images/Lab_Bg.jpg'
+     );
+     background-attachment: fixed;
+     background-size:cover;
+     background-repeat: no-repeat;
+     background-position: center;
+            
+    }
+    .input{
+      font: inherit;
+      padding: 0.2em 0.5em;
+      align-self: center;
+      width: 500px;
+      margin-top: 50px;
+      margin-left: 450px;
+      text-transform: uppercase;
+
+    }
+    .button{
+      background-color: red;
+  color: blanchedalmond;
+  text-align: center;
+  font-size: 28px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: fixed;
+  align-self: center;
+  margin-top: 30px;
+  margin-left: 488px;
+
+    }
+    .heading{
+      color: blanchedalmond;
+      font-size: xx-large;
+      margin-top:250px ;
+      margin-left: 250px;
+      
+    }
+  </style>
+</head>
+<body>
+  <h2 class="heading">According to your analysis, which weapon was used to stab the victim?</h2>
+  <div><input class="input" type="text" placeholder=""></div>
+  <div><button class="button" onclick="Redirect()">You can move on to Next Stage>></button></div> 
+  <script>
+    var input = document.querySelector(".input");
+    var button = document.querySelector(".button");
+    button.disabled = true;
+    input.addEventListener("change", stateHandle);
+
+    function stateHandle() {
+    if(document.querySelector(".input").value === "ICE KNIFE"||"ice knife"||"ICE BLADE"||"ice blade"||"ICE DAGGER"||"ice dagger") {
+        button.disabled = false;
+    } 
+    else {
+        button.disabled = true;
+        alert("You guessed the wrong weapon!")
+    }
+}
+function Redirect(){
+  window.location.href="/Laboratory.html"
+}
+  </script>
+</body>
+</html>

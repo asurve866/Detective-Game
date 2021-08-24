@@ -1,0 +1,159 @@
+.container {
+text-align: center;
+margin:50px;
+ }
+
+ .grey {
+ 	background: #ff0000;
+ 	font-weight: bold;
+ 	font-size: 20px;
+ 	padding: 5px;
+ 	margin: 10px;
+   color: blanchedalmond;
+ }
+
+.step1 {
+	font-size: 19px;
+	margin: 20px;
+}
+
+.step2 {
+	font-size: 19px;
+	margin: 20px;
+}
+
+.step3 {
+	font-size: 20px;
+	margin: 40px;
+}
+
+
+/*ClueSlides*/
+
+.mainSlide {
+text-align: center;
+margin: 0px 0px 10px 30px;
+
+}
+
+.slider {
+  width: 800px;
+  height: 400px;
+  display: flex;
+  overflow-x: auto;
+  border: 0.5px #CCCFCF solid;
+  display: inline-block
+}
+
+.slides {
+  display: flex;
+  overflow-x: auto;
+
+}
+
+.slide {
+  width: 700px;
+  flex-shrink: 0;
+  height: 100%;
+  margin: 10px;
+}
+
+#deliberate {
+margin: 300px;
+border: 1px black solid;
+display: inline-block;
+font-size: 200px;
+
+}
+button {
+background-color: #C75052;
+font-family: Avenir;
+font-size: 200px;
+font-weight: bold;
+color: white;
+margin:90px;
+text-align: center;
+width:200px;
+height:100px;
+}
+
+.label {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/*Input and output styling*/
+.starter{
+  font-size:30px;
+  padding:5px;
+  display:block;
+  margin:0px;
+  background-color: #B0D9D9;
+  text-align: center;
+  display: inline-block;
+}
+
+#output{
+  background-color:transparent;
+  font-family: 'Avenir', Arial;
+  font-size: 30px;
+  width: 800px;
+  margin: 30px;
+}
+
+.suspectImageSetOne {
+/*  border:3px solid blue;*/
+  width: 800px;
+  display: inline-block
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  margin-top: 10px;
+
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.suspectImageSetTwo {
+/*  border:3px solid blue;*/
+  width: 800px;
+  display: inline-block
+}
+
+.suspectNumber1 {
+	align-content: center;
+	margin: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+
+}
+span.number {
+	text-align: center;
+	margin: 80px;
+
+}
+
+.suspectNumber2 {
+	align-content: center;
+	margin: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+	}
+
+footer {
+	font-size: 20px;
+	text-align: center;
+	margin: 0;
+	background-color:transparent;
+	padding: 20px;
+
+}
